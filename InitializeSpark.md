@@ -59,3 +59,22 @@ Could not find valid SPARK_HOME while searching ['/Users/Leslie/GitHub', '/Users
 
 5. **Apply** the settings
 
+
+
+
+### Error
+
+```Shell
+Error in pyspark startup:
+IPYTHON and IPYTHON_OPTS are removed in Spark 2.0+. Remove these from the environment and set PYSPARK_DRIVER_PYTHON and PYSPARK_DRIVER_PYTHON_OPTS instead.
+```
+
+Delete `IPYTHON` and `IPYTHON_OPTS` in **.bashrc** (or **.zshrc**). And add:
+
+```shell
+export PYSPARK_DRIVER_PYTHON="ipython"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook" pyspark
+```
+
+Then *Spark* can be started via IPython.
+
