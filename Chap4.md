@@ -23,3 +23,10 @@ RDD —> pair RDD by `map()`
 
 
 
+分区数决定了在RDD上执行操作时的并行度.
+
+```python
+>>> data = [('a', 3), ('b', 4), ('a', 1)]
+>>> sc.parallelize(data).reduceByKey(lambda x, y: x + y, 10) # 分区数为10
+```
+
