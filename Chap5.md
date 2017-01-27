@@ -23,3 +23,19 @@ input = sc.textFile("../python/README.md")
 data = input.map(lambda x: json.loads(x))
 ```
 
+
+
+ #### Read SequenceFile
+
+```python
+val data = sc.sequenceFile(infile, 'org.apache.hadoop.io.Text', 'org.apache.hadoop.io.InWritable')
+```
+
+
+
+#### Save SequenceFile
+
+```python
+# Don't know yet
+```
+
